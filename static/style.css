@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+      background-color: navy;
+}
+
+.logo-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 990px;
+    margin-top: -50px;
+    z-index: 1;
+}
+
+.logo-menu ul li {
+
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo-menu ul li a {
+  color: white;
+  font-size: 20px;
+  /*text-align: center;*/
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: gray;
+}
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*.kalnia {*/
+/*  font-family: "Kalnia", serif;*/
+/*  font-optical-sizing: auto;*/
+/*  font-weight: 100;*/
+/*  font-style: normal;*/
+/*  font-variation-settings:*/
+/*    "wdth" 100;*/
+/*}*/
+
+.logo-menu {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 80px;
+    height: auto;
+    z-index: 1;
+}
+
+.hometextoverlay {
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.homeimage img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 0;
+    animation: slowZoom 8s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+.hometext {
+    font-size: 60px;
+    font-family: "Story-Script", serif;
+    font-style: italic;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    div.flex-container {
+        flex-direction: row;
+    }
+}
+
+@keyframes slowZoom {
+    0% {transform: scale(1)}
+    100% {transform: scale(1.1)}
+}
+
+.hero-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.hero-cards div {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    z-index: 1
+    }
