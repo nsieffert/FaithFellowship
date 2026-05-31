@@ -25,11 +25,11 @@ body {
 }
 
 .logo-menu ul li a {
-  color: white;
-  font-size: 20px;
-  /*text-align: center;*/
-  padding: 14px 16px;
-  text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-shadow: -1px 1px 0 black;
 }
 
 ul li a:hover {
@@ -84,6 +84,7 @@ ul li a:hover {
     font-family: "Story-Script", serif;
     font-style: italic;
     text-align: center;
+    text-shadow: -1px 1px 0 black;
 }
 
 
