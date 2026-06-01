@@ -41,15 +41,6 @@ ul li a:hover {
   font-style: normal;
 }
 
-/*.kalnia {*/
-/*  font-family: "Kalnia", serif;*/
-/*  font-optical-sizing: auto;*/
-/*  font-weight: 100;*/
-/*  font-style: normal;*/
-/*  font-variation-settings:*/
-/*    "wdth" 100;*/
-/*}*/
-
 .logo-menu {
     position: absolute;
     top: 40px;
@@ -118,20 +109,25 @@ ul li a:hover {
     z-index: 0;
 }
 
+.believeIntro {
+    text-align: center;
+    color: black;
+}
+.believe-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 5px;
+    gap: 5px;
+}
+.believe-cards .single-card:hover {
+    /*animation: enlarge 3s ease-in;*/
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-/*.footer .info {*/
-/*    height: 100px;*/
-/*    width: 200px;*/
-/*}*/
-/*.footer .footer-map {*/
-/*    height: 300px;*/
-/*    width: 300px;*/
-/*}*/
-/*.footer .footer-facebook {*/
-/*    height: 80px;*/
-/*    width: 80px;*/
-/*}*/

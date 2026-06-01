@@ -25,6 +25,9 @@ def watch():
 def give():
     return render_template('give.html')
 
+@app.route('/believe')
+def believe():
+    return render_template('believe.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
