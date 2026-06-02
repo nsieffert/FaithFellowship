@@ -29,6 +29,10 @@ def give():
 def believe():
     return render_template('believe.html')
 
+@app.route('/studies')
+def studies():
+    return render_template('studies.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
 

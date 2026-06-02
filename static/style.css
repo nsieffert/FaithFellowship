@@ -35,6 +35,7 @@ body {
 ul li a:hover {
   background-color: gray;
 }
+
 .story-script-regular {
   font-family: "Story Script", sans-serif;
   font-weight: 400;
@@ -63,10 +64,10 @@ ul li a:hover {
 .homeimage img {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 820px;
     overflow: hidden;
     z-index: 0;
-    animation: slowZoom 8s ease-in-out infinite alternate;
+    animation: slowZoom 7s ease-in-out infinite alternate;
     transform-origin: center center;
 }
 
@@ -112,6 +113,8 @@ ul li a:hover {
 .believeIntro {
     text-align: center;
     color: black;
+    font-style: italic;
+
 }
 .believe-cards {
     display: grid;
@@ -125,6 +128,79 @@ ul li a:hover {
     transform-origin: center center;
 }
 
+div.goodlinks a {
+    color: #fff;
+    opacity: 5;
+}
+
+div.goodlinks {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid hsla(0, 0%, 100%, -1);
+    font-size: .75rem;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    padding-top: 17px;
+    margin-left: 30px;
+    user-select: none;
+}
+
+a.goodlinks-item {
+    color: #ffffff;
+    font: 12px Gotham sans-serif;
+    padding-top: 120px;
+    text-decoration: none;
+}
+
+a.goodlinks-item-active {
+    color: white;
+    font: 16px Gotham sans-serif;
+    padding-top: 120px;
+}
+
+.bible-study-headline {
+    font: bold;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    text-shadow: -1px 1px 0 black;
+    padding-top: 110px;
+}
+
+.current-study {
+    display: flex;
+    flex-direction: row;
+    margin-top: 140px;
+    gap: 20px;
+    padding: 10px;
+}
+
+.current-study img {
+    width: 450px;
+    height: 350px;
+}
+
+.studies-text H1 {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    text-shadow: -1px 1px 0 black;
+}
+
+.studies-text h2 {
+    color: white;
+    text-shadow: -1px 1px 0 black;
+}
+.study-books div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px;
+    padding-bottom: 50px;
+    color: white;
+    text-shadow: -1px 1px 0 black;
+}
 
 .footer {
     display: flex;
