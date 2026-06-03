@@ -9,7 +9,23 @@
     <meta charset="UTF-8">
     <title>FaithFellowship</title>
 
+<style>
+.contact-form {
+    margin-top: 200px;
+    text-align: center;
+    color: white;
+}
 
+#responseMessage {
+     margin-top: 20px;
+     font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.success { color: green; }
+.error { color: red; }
+
+</style>
 </head>
 <body>
 <div class="logo-menu">
@@ -22,6 +38,63 @@
       <li><a href="contact">Contact</a></li>
     </ul>
 </div>
+
+<body>
+
+<div class="contact-form">
+<h2>Contact Us</h2>
+    <form id="contactForm">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Message:</label><br>
+        <textarea name="message" required></textarea><br><br>
+
+        <button type="submit">Send</button>
+    </form>
+</div>
+    <div id="responseMessage"></div>
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // Stop normal form submission
+
+            const formData = new FormData(this);
+
+            fetch("/send", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const msgDiv = document.getElementById("responseMessage");
+                msgDiv.textContent = data.message;
+                msgDiv.className = data.status === "success" ? "success" : "error";
+                msgDiv.style.opacity = 1;
+
+                if (data.status === "success") {
+                    // Clear form fields
+                    document.getElementById("contactForm").reset();
+
+                    // Fade out message after 5 seconds
+                    setTimeout(() => {
+                        msgDiv.style.opacity = 0;
+                    }, 5000);
+                }
+            })
+            .catch(error => {
+                const msgDiv = document.getElementById("responseMessage");
+                msgDiv.textContent = "❌ An unexpected error occurred.";
+                msgDiv.className = "error";
+                msgDiv.style.opacity = 1;
+            });
+        });
+    </script>
+
 <div class="footer">
 
     <div class="footer-map">
