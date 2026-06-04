@@ -84,6 +84,7 @@ ul li a:hover {
     grid-template-columns: auto auto auto;
     padding: 5px;
     gap: 5px;
+    margin-left: 75px;
     }
 
 @media screen and (max-width: 600px) {
@@ -244,10 +245,19 @@ a.goodlinks-item-active {
     padding: 5px;
     gap: 50px;
     justify-content: center;
+}
+/*about page styling*/
 
-
+.about-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+    gap: 5px;
+    margin-left: 75px;
+    margin-top: 200px;
 
 }
+/*footer styling - some pages have special footer styling*/
 .footer {
     display: flex;
     flex-direction: row;
