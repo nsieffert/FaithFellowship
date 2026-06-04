@@ -6,6 +6,7 @@ body {
       background-color: navy;
 }
 
+/*menu styling - some pages overwrite parts for black letters*/
 .logo-menu ul {
     list-style: none;
     margin: 0;
@@ -51,6 +52,7 @@ ul li a:hover {
     z-index: 1;
 }
 
+/*home page styling plus other similar*/
 .hometextoverlay {
     color: white;
     position: absolute;
@@ -78,15 +80,6 @@ ul li a:hover {
     text-align: center;
     text-shadow: -1px 1px 0 black;
 }
-
-.vid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 5px;
-    gap: 5px;
-    margin-left: 75px;
-    }
-
 @media screen and (max-width: 600px) {
     div.flex-container {
         flex-direction: row;
@@ -116,7 +109,22 @@ ul li a:hover {
     position: relative;
     z-index: 0;
 }
+/*Watch page styling*/
+.vid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px;
+    gap: 5px;
+    margin-left: 75px;
+    }
 
+.watchOutro {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*what we believe styling*/
 .believeIntro {
     text-align: center;
     color: black;
@@ -128,12 +136,6 @@ ul li a:hover {
     font-style: normal;
     color: rgb(0 112 192);
     text-shadow: -1px 0 0 black;
-}
-
-.watchOutro {
-    color: white;
-    text-align: center;
-    margin-bottom: 50px;
 }
 
 .believe-cards {
@@ -179,6 +181,7 @@ a.goodlinks-item-active {
     padding-top: 120px;
 }
 
+/*Bible study home page and studies page styling*/
 .bible-study-headline {
     font: bold;
     font-size: 45px;
@@ -221,6 +224,7 @@ a.goodlinks-item-active {
     color: white;
     text-shadow: -1px 1px 0 black;
 }
+/*meet the staff styling*/
 .staff-bios {
     margin-top: 200px;
 }
@@ -246,8 +250,8 @@ a.goodlinks-item-active {
     gap: 50px;
     justify-content: center;
 }
-/*about page styling*/
 
+/*about page styling*/
 .about-grid {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -255,8 +259,59 @@ a.goodlinks-item-active {
     gap: 5px;
     margin-left: 75px;
     margin-top: 200px;
-
 }
+
+/*give page styling*/
+.givetextoverlay {
+    color: white;
+    position: absolute;
+    top: 160px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.giveimage img {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+    z-index: 0;
+    animation: slowZoom 7s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+.givetext {
+    font-size: 60px;
+    font-family: "Story-Script", serif;
+    font-style: italic;
+    text-align: center;
+    text-shadow: -1px 1px 0 black;
+}
+
+.givetext1 {
+    font-size: 40px;
+    color: darkblue;
+    font-family: "Story-Script", serif;
+    font-style: italic;
+    text-align: center;
+    text-shadow: -1px 1px 0 white;
+}
+.givetext2 {
+    font-size: 30px;
+    color: darkblue;
+    font-family: "Story-Script", serif;
+    font-style: normal;
+    text-align: center;
+    text-shadow: -1px 1px 0 white;
+}
+.thanks {
+    color: red;
+    font-size: 40px;
+    text-align: center;
+}
+
 /*footer styling - some pages have special footer styling*/
 .footer {
     display: flex;
