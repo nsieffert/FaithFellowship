@@ -13,6 +13,7 @@ PASSWORD_KEY = os.getenv(secret.PASSWORD_KEY)
 
 
 app = Flask(__name__)
+application = app
 @app.route('/')
 def index():
     return render_template('index.html')

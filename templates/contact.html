@@ -10,96 +10,16 @@
     <title>FaithFellowship</title>
 
 <style>
-
 body {
     background-color: #D9D9D9;
 }
-
-/* Styling the contact form*/
-.contact-header {
-    margin-top: 190px;
-    text-align: center;
-    color: black;
-    text-shadow: 1px 1px 0 white;
-}
-.contact-header1 {
-    text-align: center;
-    color: black;
-    text-shadow: 1px 1px 0 white;
-}
-
-.contact-flex-box {
-    display: flex;
-    flex-direction: row;
-    padding: 1px;
-    gap: 2px;
-    justify-content: center;
-}
-.contact-form {
-    width: 400px;
-    max-width: 500px;
-    margin: auto;
-    padding: 19px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Style text inputs, email inputs, and textarea */
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;              /* Full width */
-    padding: 10px;            /* Inner spacing */
-    margin: 8px 0;            /* Space between fields */
-    border: 1px solid #ccc;   /* Light border */
-    border-radius: 4px;       /* Rounded corners */
-    box-sizing: border-box;   /* Include padding in width */
-    font-size: 14px;
-}
-
-/* Style the submit button */
-button[type="submit"] {
-    background-color: #4CAF50; /* Green background */
-    color: white;              /* White text */
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;           /* Pointer on hover */
-    font-size: 16px;
-}
-
-/* Change button color on hover */
-button[type="submit"]:hover {
-    background-color: #D3D3D3;
-}
-
-/* message on send */
-#responseMessage {
-     margin-top: 20px;
-     font-weight: bold;
-    color: white;
-    text-align: center;
-}
-.success { color: green; }
-.error { color: red; }
-
-{#menu styling for black menu#}
-.logo-menu ul li a {
-    color: black;
-    font-size: 20px;
-    padding: 14px 16px;
-    text-decoration: none;
-    text-shadow: -1px 1px 0 white;
-}
-
 </style>
 </head>
 <body>
-<div class="logo-menu">
-    <img src="/static/ffcotnlogo.png">
+<div class="logo-menu-dark-on-light">
+    <a href="https://faithfellowshipterrell.org"><img src="../static/ffcotnblackonly.png"></a>
     <ul>
-      <li><a href="home">Home</a></li>
+{#      <li><a href="home">Home</a></li>#}
       <li><a href="about">About</a></li>
       <li><a href="give">Give</a></li>
       <li><a href="watch">Watch</a></li>
