@@ -101,6 +101,7 @@ ul li a:hover {
     top: 250px;
     left: 0;
     width: 100%;
+    max-width: 100%;
     height: auto;
     z-index: 1;
 }
@@ -108,6 +109,7 @@ ul li a:hover {
 .homeimage img {
     position: relative;
     width: 100%;
+    max-width: 100%;
     height: auto;
     overflow: hidden;
     z-index: 0;
@@ -138,18 +140,22 @@ ul li a:hover {
     flex-direction: row;
     justify-content: center;
 }
+
 .hero-cards div {
-    width: 300px;
+    /*width: 50%;*/
+    max-width: 50%;
     margin: 15px;
     padding-top: 150px;
     z-index: 1;
     }
 
 .biblestudy img {
-    width: 100%;
+    /*width: 100%;*/
+    max-width: 100%;
     position: relative;
     z-index: 0;
 }
+
 /*Watch page styling*/
 .vid-container {
     display: grid;
@@ -158,6 +164,12 @@ ul li a:hover {
     gap: 5px;
     margin-left: 75px;
     }
+
+@media screen and (max-width: 600px) {
+    .vid-container {
+        flex-direction: row;
+    }
+}
 
 .watchOutro {
     color: white;
@@ -171,7 +183,7 @@ ul li a:hover {
     text-align: center;
     color: black;
     font-style: italic;
-    padding-top: 20px;
+    padding-top: 8%;
 
 }
 
@@ -187,54 +199,25 @@ ul li a:hover {
     padding: 5px;
     gap: 5px;
 }
+
 .believe-cards .single-card:hover {
     /*animation: enlarge 3s ease-in;*/
     transform: scale(1.2);
     transform-origin: center center;
 }
 
-/*div.goodlinks a {*/
-/*    color: #fff;*/
-/*    opacity: 5;*/
-/*}*/
-
-/*div.goodlinks {*/
-/*    position: relative;*/
-/*    z-index: 1;*/
-/*    border-top: 1px solid hsla(0, 0%, 100%, -1);*/
-/*    font-size: .75rem;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    line-height: 1;*/
-/*    padding-top: 17px;*/
-/*    margin-left: 30px;*/
-/*    user-select: none;*/
-/*}*/
-
-/*a.goodlinks-item {*/
-/*    color: #ffffff;*/
-/*    font: 12px Gotham sans-serif;*/
-/*    padding-top: 120px;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*a.goodlinks-item-active {*/
-/*    color: white;*/
-/*    font: 16px Gotham sans-serif;*/
-/*    padding-top: 120px;*/
-/*}*/
-
 .believe-break {
-    border: none;              /* Remove default border */
-    height: 3px;               /* Thickness of the line */
-    background-color: rgb(0 112 192);    /* Line color */
-    width: 100%;               /* Full width */
-    margin: 20px 0;            /* Space above and below */
+    border: none;
+    height: 3px;
+    background-color: rgb(0 112 192);
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
 }
 
 /*Contact form styling*/
 .contact-header {
-    margin-top: 190px;
+    padding-top: 10%;
     text-align: center;
     color: black;
     text-shadow: 1px 1px 0 white;
@@ -249,14 +232,14 @@ ul li a:hover {
     display: flex;
     flex-direction: row;
     padding: 1px;
-    gap: 2px;
+    gap: 5px;
     justify-content: center;
 }
 .contact-form {
-    width: 400px;
-    max-width: 500px;
+    width: 50%;
+    max-width: 75%;
     margin: auto;
-    padding: 19px;
+    padding: 2%;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -266,23 +249,23 @@ ul li a:hover {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%;              /* Full width */
-    padding: 10px;            /* Inner spacing */
-    margin: 8px 0;            /* Space between fields */
-    border: 1px solid #ccc;   /* Light border */
-    border-radius: 4px;       /* Rounded corners */
-    box-sizing: border-box;   /* Include padding in width */
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
     font-size: 14px;
 }
 
 /* Style the submit button */
 button[type="submit"] {
-    background-color: #4CAF50; /* Green background */
-    color: white;              /* White text */
+    background-color: #4CAF50;
+    color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    cursor: pointer;           /* Pointer on hover */
+    cursor: pointer;
     font-size: 16px;
 }
 
@@ -304,25 +287,31 @@ button[type="submit"]:hover {
 
 /*studies page styling*/
 
-.acts-study-pic {
-    height: 300px;
-    width: 100%;
-}
 .bible-study-headline {
     font-size: 45px;
     text-align: center;
     color: white;
     text-shadow: -1px 1px 0 black;
-    padding-top: 80px;
 }
 
 .current-study {
     display: flex;
     flex-direction: row;
-    padding-top: 50px;
+    padding-top: 20px;
     gap: 20px;
+    justify-content: center
 }
 
+.acts-study-pic {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+.studies-text{
+    width: 100%;
+    max-width: 100%;
+}
 .studies-text H1 {
     color: white;
     font-style: italic;
@@ -345,7 +334,7 @@ button[type="submit"]:hover {
 }
 /*meet the staff styling*/
 .staff-bios {
-    padding-top: 175px;
+    padding-top: 12%;
 }
 
 .staff-bios H1 {
@@ -457,3 +446,4 @@ button[type="submit"]:hover {
     flex-direction: row;
     justify-content: center;
 }
+
