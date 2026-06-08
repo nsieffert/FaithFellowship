@@ -50,6 +50,13 @@ def studies():
 def staff():
     return render_template('staff.html')
 
+@app.route('/daily-verse')
+def daily_verse():
+    return render_template('daily-verse.html')
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
 @app.route("/form")
 def form():
     # Serve the HTML form directly
@@ -84,6 +91,7 @@ def send_email():
         return jsonify({"status": "success", "message": "Your message has been sent successfully!"})
     except Exception as e:
         return jsonify({"status": "error", "message": f"Error sending message: {e}"}), 500
+
 
 
 if __name__ == '__main__':

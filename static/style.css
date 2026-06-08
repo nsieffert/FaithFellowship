@@ -6,88 +6,103 @@ body {
       background-color: navy;
 }
 
-/*menu styling for dark menu on light background*/
-.logo-menu-dark-on-light ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 990px;
-    margin-top: -50px;
-    z-index: 1;
-}
-
-.logo-menu-dark-on-light ul li {
-
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.logo-menu-dark-on-light ul li a {
-    color: black;
-    font-size: 20px;
-    padding: 14px 16px;
-    text-decoration: none;
-    text-shadow: -1px 1px 0 white;
-}
-
-ul li a:hover {
-  background-color: gray;
-}
-
-.logo-menu-dark-on-light {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 80px;
-    height: auto;
-    z-index: 1;
-}
-
 /*menu styling for light on dark background*/
-.logo-menu ul {
+
+.spacer {
+    visibility: hidden;
+    flex-grow: 1;
+    min-width: 50px;
+}
+
+.justlogo {
+    flex-shrink: 0;
+}
+.logo-and-menu-light-on-dark {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 20px;
+    z-index: 1;
+}
+
+.logo-and-menu-light-on-dark ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
-    margin-left: 990px;
-    margin-top: -50px;
+    justify-content: center;
+    align-items: flex-end;
+    /*margin-left: 990px;*/
+    /*margin-top: -50px;*/
     z-index: 1;
 }
-
-.logo-menu ul li {
-
+/*leave as is*/
+.logo-and-menu-light-on-dark ul li {
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
-.logo-menu ul li a {
+/*leave as is*/
+.logo-and-menu-light-on-dark ul li a {
     color: white;
     font-size: 20px;
-    padding: 14px 16px;
+    padding: 10px 12px;
     text-decoration: none;
     text-shadow: -1px 1px 0 black;
 }
 
+/*leave as is*/
 ul li a:hover {
   background-color: gray;
 }
 
-.logo-menu {
+
+/*menu styling for dark-on-light background*/
+.logo-and-menu-dark-on-light {
     position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 80px;
-    height: auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 20px;
     z-index: 1;
 }
 
+.logo-and-menu-dark-on-light ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /*margin-left: 990px;*/
+    /*margin-top: -50px;*/
+    z-index: 1;
+}
+/*leave as is*/
+.logo-and-menu-dark-on-light ul li {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*leave as is*/
+.logo-and-menu-dark-on-light ul li a {
+    color: black;
+    font-size: 20px;
+    padding: 10px 12px;
+    text-decoration: none;
+    text-shadow: -1px 1px 0 white;
+}
 @media screen and (max-width: 600px) {
-    .logo-menu .logo-menu-dark-on-light {
+    .logo-and-menu-light-on-dark .logo-menu-dark-on-light {
         flex-direction: column;
     }
 }
@@ -169,6 +184,14 @@ ul li a:hover {
 }
 
 /*Watch page styling*/
+
+.watchIntro {
+    text-align: center;
+    color: cornflowerblue;
+    text-shadow: 1px 1px 0 black;
+    font-style: italic;
+    padding-top: 8%;
+}
 .vid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -404,8 +427,14 @@ button[type="submit"]:hover {
     justify-content: center;
 }
 
+@media screen and (max-width: 500px) {
+    .staff-pic-left .staff-pic-right {
+        flex-direction: column;
+    }
+}
+
 /*about page styling*/
-.about-break {
+.about-break .blog-break {
     color: black;
 }
 
@@ -482,7 +511,81 @@ button[type="submit"]:hover {
     z-index: 1;
 }
 
-/*footer styling - some pages have special footer styling*/
+/*blog page styling*/
+.blog-header {
+    text-align: center;
+    color: black;
+    text-shadow: -1px 1px 0 white;
+}
+
+/*.blog-text {*/
+/*    flex: 1;*/
+/*    text-align: center;*/
+/*}*/
+.blog-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.blog-container .specialcross {
+    width: 100%;
+    height: auto;
+}
+
+/*daily verse styling*/
+
+.daily-verse-header {
+    color: black;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 100%;
+}
+
+.featured-verse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.verse-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 5px;
+    gap: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .verse-container {
+        flex-direction: column;
+    }
+}
+.single-verse {
+    width: 100%;
+    height: auto;
+}
+.single-verse:hover {
+    /*animation: enlarge 3s ease-in;*/
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+.featured-verse img:hover {
+    /*animation: enlarge 3s ease-in;*/
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+/*footer styling*/
 .footer {
     display: flex;
     flex-direction: row;
