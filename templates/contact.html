@@ -36,9 +36,7 @@ body {
     </ul>
     </div>
 </div>
-<body>
 
-{#pastorfaithfellowship@gmail.com - need to 2 factor auth, get an app password.#}
 <H1 class="contact-header">We'd love to hear from you.</H1>
 <h2 class="contact-header1">We try to respond within 24 hours.</h2>
 <br>
@@ -49,7 +47,7 @@ body {
     </div>
     <div class="contact-form">
         <h2>Contact Us Here</h2>
-        <form id="contactForm">
+        <form action="/contact" method="POST" id="contactForm">
             <label>Name:</label><br>
             <input type="text" name="name" required><br><br>
 
@@ -59,7 +57,7 @@ body {
             <label>Message:</label><br>
             <textarea name="message" required></textarea><br><br>
 
-            <button type="submit">Send</button>
+            <button type="submit">Send Message</button>
         </form>
     </div>
     <div>
@@ -67,45 +65,81 @@ body {
     </div>
 </div>
 
-    <div id="responseMessage"></div>
+<!-- Container for the success/error message -->
+<div id="response-msg" style="margin-top: 15px; font-weight: bold;"></div>
 
+<!-- JavaScript to handle AJAX submission -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the page from reloading
 
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(e) {
-            e.preventDefault(); // Stop normal form submission
+    const form = this;
+    const formData = new FormData(form);
+    const responseMsg = document.getElementById('response-msg');
 
-            const formData = new FormData(this);
+    // Send data to the Flask backend asynchronously
+    fetch('/contact', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        responseMsg.innerText = data.message;
 
-            fetch("/send", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                const msgDiv = document.getElementById("responseMessage");
-                msgDiv.textContent = data.message;
-                msgDiv.className = data.status === "success" ? "success" : "error";
-                msgDiv.style.opacity = 1;
+        if (data.status === 'success') {
+            responseMsg.style.color = 'green';
+            form.reset(); // Clears the form fields on success
+        } else {
+            responseMsg.style.color = 'red';
+        }
+    })
+    .catch(error => {
+        responseMsg.innerText = 'An unexpected error occurred.';
+        responseMsg.style.color = 'red';
+    });
+});
+</script>
 
-                if (data.status === "success") {
-                    // Clear form fields
-                    document.getElementById("contactForm").reset();
-
-                    // Fade out message after 5 seconds
-                    setTimeout(() => {
-                        msgDiv.style.opacity = 0;
-                    }, 5000);
-                }
-            })
-            .catch(error => {
-                const msgDiv = document.getElementById("responseMessage");
-                msgDiv.textContent = "❌ An unexpected error occurred.";
-                msgDiv.className = "error";
-                msgDiv.style.opacity = 1;
-            });
-        });
-    </script>
+{#    <script>#}
+{#        document.getElementById("contactForm").addEventListener("submit", function(e) {#}
+{#            e.preventDefault(); // Stop normal form submission#}
+{##}
+{#            const formData = new FormData(this);#}
+{##}
+{#            fetch("/send", {#}
+{#                method: "POST",#}
+{#                body: formData#}
+{#            })#}
+{#            .then(response => response.json())#}
+{#            .then(data => {#}
+{#                const msgDiv = document.getElementById("responseMessage");#}
+{#                msgDiv.textContent = data.message;#}
+{#                msgDiv.className = data.status === "success" ? "success" : "error";#}
+{#                msgDiv.style.opacity = 1;#}
+{##}
+{#                if (data.status === "success") {#}
+{#                    // Clear form fields#}
+{#                    document.getElementById("contactForm").reset();#}
+{##}
+{#                    // Fade out message after 5 seconds#}
+{#                    setTimeout(() => {#}
+{#                        msgDiv.style.opacity = 0;#}
+{#                    }, 5000);#}
+{#                }#}
+{#            })#}
+{#            .catch(error => {#}
+{#                const msgDiv = document.getElementById("responseMessage");#}
+{#                msgDiv.textContent = "❌ An unexpected error occurred.";#}
+{#                msgDiv.className = "error";#}
+{#                msgDiv.style.opacity = 1;#}
+{#            });#}
+{#        });#}
+{#    </script>#}
+<br>
+<br>
 <hr>
+
+
 <div class="footer">
 
     <div class="footer-map">

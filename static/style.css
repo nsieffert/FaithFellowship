@@ -333,7 +333,17 @@ button[type="submit"]:hover {
 .success { color: green; }
 .error { color: red; }
 
+/*.rotate-img {*/
+/*    width: 200px;*/
+/*    height: 300px;*/
+/*}*/
 
+/*.rotate {*/
+/*    animation: rotate;*/
+/*    animation-timing-function: ease-in-out;*/
+/*    animation-delay: 2s;*/
+/*    transform-origin: center center;*/
+/*}*/
 /*studies page styling*/
 
 .bible-study-headline {
