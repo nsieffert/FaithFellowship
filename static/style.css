@@ -88,7 +88,7 @@ ul li a:hover {
 }
 /*leave as is*/
 .logo-and-menu-dark-on-light ul li {
-    color: black;
+    color: white;
     font-weight: bold;
     cursor: pointer;
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+        .login-box { display: inline-block; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        .error { color: red; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Admin Portal Access</h2>
+
+        <!-- If there is a wrong password error, display it here -->
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form action="/admin-login" method="POST">
+            <label>Enter Master Password:</label><br><br>
+            <input type="password" name="password" placeholder="Password" required style="padding: 8px; width: 200px;"><br><br>
+            <button type="submit" style="padding: 8px 15px; cursor: pointer;">Login</button>
+        </form>
+    </div>
+</body>
+</html>
