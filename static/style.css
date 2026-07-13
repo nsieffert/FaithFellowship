@@ -112,9 +112,39 @@ ul li a:hover {
   font-weight: 400;
   font-style: normal;
 }
+.business {
+    text-align: center;
+    color: darkblue;
+    font-size: 45px;
+}
 
+.business-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 100px;
+    gap: 5px;
+}
 
+.hs-title {
+    padding-top: 130px;
+    font-size: 40px;
+    color: darkblue;
+    text-align: center;
+}
+.homeschool-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 200px;
+    gap: 45px;
+}
 
+.terrell-forney {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 175px;
+  width: 50%;
+}
 /*home/index page styling*/
 .hometextoverlay {
     color: white;

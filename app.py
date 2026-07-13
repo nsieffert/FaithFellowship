@@ -13,6 +13,7 @@ def index():
 def about():
     return render_template('about.html')
 
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     try:
@@ -73,6 +74,22 @@ def studies():
 @app.route('/staff')
 def staff():
     return render_template('staff.html')
+
+@app.route('/homeschool')
+def homeschool():
+    return render_template('homeschool.html')
+
+@app.route('/terrell')
+def terrell():
+    return render_template('terrell.html')
+
+@app.route('/forney')
+def forney():
+    return render_template('forney.html')
+
+@app.route('/business')
+def business():
+    return render_template('business.html')
 
 @app.route('/daily-verse')
 def daily_verse():
