@@ -91,6 +91,10 @@ def forney():
 def business():
     return render_template('business.html')
 
+@app.route('/first')
+def first():
+    return render_template('first.html')
+
 @app.route('/daily-verse')
 def daily_verse():
     return render_template('daily-verse.html')

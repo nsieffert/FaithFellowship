@@ -145,6 +145,20 @@ ul li a:hover {
   padding-left: 175px;
   width: 50%;
 }
+
+/*first time visitor styling*/
+
+.visitor {
+     display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 200px;
+    gap: 45px;
+}
+
+.visitor-content {
+    justify-content: center;
+    align-items: center;
+}
 /*home/index page styling*/
 .hometextoverlay {
     color: white;
