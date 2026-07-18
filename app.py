@@ -102,6 +102,11 @@ def daily_verse():
 @app.route('/blog')
 def blog():
     return render_template('blog.html')
+
+
+@app.route('/archive')
+def archive():
+    return render_template('archive.html')
 @app.route("/form")
 def form():
     # Serve the HTML form directly

@@ -146,6 +146,20 @@ ul li a:hover {
   width: 50%;
 }
 
+.fash-activities {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    gap: 20px;
+}
+
+.fash-act {
+    max-width: 20%;
+    max-height: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
 /*first time visitor styling*/
 
 .visitor {
