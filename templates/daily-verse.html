@@ -1,51 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Story+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
-    <meta charset="UTF-8">
-    <title>FaithFellowship</title>
+{% extends 'base.html' %}
+{% block content %}
 
-<style>
-body {
-    background-color: aliceblue;
-}
-</style>
-</head>
-<body>
-
-<div class="logo-and-menu-dark-on-light">
-    <div>
-    <a href="https://faithfellowshipterrell.org">
-        <img src="../static/ffcotnblackonly.png" class="justlogo" alt="centered"></a>
-    </div>
-    <div class="spacer">
-
-    </div>
-    <div>
-    <ul>
-      <li><a href="about">About</a></li>
-      <li><a href="first">First Time</a></li>
-      <li><a href="give">Give</a></li>
-      <li><a href="watch">Watch</a></li>
-      <li><a href="daily-verse">Daily Verse</a></li>
-      <li><a href="blog">Blog</a></li>
-      <li><a href="homeschool">Homeschool</a></li>
-      <li><a href="business">Businesses</a></li>
-      <li><a href="contact">Contact</a></li>
-
-    </ul>
-    </div>
-</div>
+    <style>
+    body {
+        background-color: cornsilk;
+    }
+    </style>
 <div class="daily-verse-header">
     <h1><strong>Your Daily Verse</strong></h1>
 </div>
 <div class="featured-verse">
     <div class="spacer"></div>
-    <div><img src="../static/vdjul18pr1429.png" style="width: 500px"></div>
+    <div><img src="../static/vdjul9jn151.jpg" style="width: 500px"></div>
     <div class="spacer"></div>
 </div>
 <div class="daily-verse-header">
@@ -53,6 +19,7 @@ body {
 </div>
 
 <div class="verse-container">
+    <div><img src="../static/vdjul18pr1429.png" class="single-verse"></div>
     <div><img src="../static/vdjul17mt2122.png" class="single-verse"></div>
     <div><img src="../static/vdjul16ja117.png" class="single-verse"></div>
     <div><img src="../static/vdjul15ps3410.png" class="single-verse"></div>
@@ -84,7 +51,6 @@ body {
     <div><img src="../static/vep24jun19.png" class="single-verse"></div>
     <div><img src="../static/vps1459jun18.png" class="single-verse"></div>
     <div><img src="../static/vis4031jun17.png" class="single-verse"></div>
-    <div><img src="../static/vph320jun15.png" class="single-verse"></div>
         </div>
 
 <div class="about-title"><a href="https://faithfellowshipterrell.org/archives">
@@ -112,5 +78,4 @@ body {
         <a href="https://www.facebook.com/FaithFellowshipCOTN" target="_blank" rel="noopener noreferrer"><img src="../static/likeusinblack.png" style="width:300px"></a>
     </div>
 </div>
-</body>
-</html>
+{% endblock content %}

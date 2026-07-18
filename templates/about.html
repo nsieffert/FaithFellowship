@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Story+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
-    <meta charset="UTF-8">
-    <title>FaithFellowship</title>
+{% extends 'base.html' %}
+{% block content %}
 
-<style>
-body {
-    background-color: aliceblue;
-}
-</style>
-</head>
-<body>
-<div class="logo-and-menu-dark-on-light">
-    <div>
-    <a href="https://faithfellowshipterrell.org">
-        <img src="../static/ffcotnblackonly.png" class="justlogo" alt="centered"></a>
-    </div>
-    <div class="spacer">
-
-    </div>
-    <div>
-    <ul>
-{#      <li><a href="home">Home</a></li>#}
-{#        <li><a href="welcome">Welcome</a></li>#}
-            <li><a href="about">About</a></li>
-      <li><a href="first">First Time</a></li>
-      <li><a href="give">Give</a></li>
-      <li><a href="watch">Watch</a></li>
-      <li><a href="daily-verse">Daily Verse</a></li>
-      <li><a href="blog">Blog</a></li>
-      <li><a href="homeschool">Homeschool</a></li>
-      <li><a href="business">Businesses</a></li>
-      <li><a href="contact">Contact</a></li>
-
-    </ul>
-    </div>
-</div><H2 class="about-title">About Faith Fellowship Church of the Nazarene</H2>
+<H2 class="about-title">About Faith Fellowship Church of the Nazarene</H2>
 <div class="about-grid">
     <div>
         <img src="../static/old1.png" style="width:200px" alt="centered">
@@ -106,8 +67,9 @@ body {
         <img src="../static/servicetimeblack.png" style="width:500px" alt="centered">
     </div>
     <div class="footer-facebook">
-        <a href="https://www.facebook.com/FaithFellowshipCOTN" target="_blank" rel="noopener noreferrer"><img src="../static/likeusinblack.png" style="width:300px"></a>
+        <a href="https://www.facebook.com/FaithFellowshipCOTN" target="_blank" rel="noopener noreferrer">
+            <img src="../static/likeusinblack.png" style="width:300px" alt="centered"></a>
     </div>
 </div>
-</body>
-</html>
+
+{% endblock content %}

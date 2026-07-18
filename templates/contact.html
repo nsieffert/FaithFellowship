@@ -1,44 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Story+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
-    <meta charset="UTF-8">
-    <title>FaithFellowship</title>
-
-<style>
-body {
-    background-color: #D9D9D9;
-}
-</style>
-</head>
-<body>
-<div class="logo-and-menu-dark-on-light">
-    <div>
-    <a href="https://faithfellowshipterrell.org">
-        <img src="../static/ffcotnblackonly.png" class="justlogo" alt="centered"></a>
-    </div>
-    <div class="spacer">
-    </div>
-    <div>
-    <ul>
-      <li><a href="about">About</a></li>
-      <li><a href="first">First Time</a></li>
-      <li><a href="give">Give</a></li>
-      <li><a href="watch">Watch</a></li>
-      <li><a href="daily-verse">Daily Verse</a></li>
-      <li><a href="blog">Blog</a></li>
-      <li><a href="homeschool">Homeschool</a></li>
-      <li><a href="business">Businesses</a></li>
-      <li><a href="contact">Contact</a></li>
-
-    </ul>
-    </div>
-</div>
+{% extends 'base.html' %}
+{% block content %}
 
 <H1 class="contact-header">We'd love to hear from you.</H1>
 <h2 class="contact-header1">We try to respond within 24 hours.</h2>
@@ -162,5 +123,4 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         <a href="https://www.facebook.com/FaithFellowshipCOTN" target="_blank" rel="noopener noreferrer"><img src="../static/likeusinblack.png" style="width:300px"></a>
     </div>
 </div>
-</body>
-</html>
+{% endblock content %}

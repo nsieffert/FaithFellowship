@@ -1,50 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Story+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
-    <meta charset="UTF-8">
-    <title>FaithFellowship</title>
+{% extends 'base.html' %}
+{% block content %}
 
-<style>
-body {
-    background-color: aliceblue;
-}
-</style>
-</head>
-<body>
-<div class="logo-and-menu-dark-on-light">
-    <div>
-    <a href="https://faithfellowshipterrell.org">
-        <img src="../static/ffcotnblackonly.png" class="justlogo" alt="centered"></a>
-    </div>
-    <div class="spacer">
-
-    </div>
-    <div>
-    <ul>
-          <li><a href="about">About</a></li>
-      <li><a href="first">First Time</a></li>
-      <li><a href="give">Give</a></li>
-      <li><a href="watch">Watch</a></li>
-      <li><a href="daily-verse">Daily Verse</a></li>
-      <li><a href="blog">Blog</a></li>
-      <li><a href="homeschool">Homeschool</a></li>
-      <li><a href="business">Businesses</a></li>
-      <li><a href="contact">Contact</a></li>
-
-        </ul>
-      </li>
-    </ul>
-    </div>
-</div><H2 class="about-title">We Love Supporting Our Local Businesses!</H2>
+    <style>
+    body {
+        background-color: ivory;
+    }
+    </style>
+<H2 class="about-title">We Love Supporting Our Local Businesses!</H2>
 <div class="business-grid">
     <div>
         <a href="https://www.whiskedawaybakehouse.com/" target="blank" rel="noopener nonreferrer">
-        <img src="../static/whisked.png" style="width:200px" alt="centered"></a>
+        <img src="../static/whisked.png" style="width:275px" alt="centered"></a>
     </div>
     <div>
         <a href="https://www.lockesupply.com/" target="blank" rel="noopener nonreferrer"></a>
@@ -56,8 +22,27 @@ body {
     </div>
         <div>
         <a href="https://www.braums.com/menu/">
-        <img src="../static/braumsaddress.png" style="width:200px" alt="centered"></a>
+        <img src="../static/braums.png" style="width:250px" alt="centered"></a>
     </div>
+     <div>
+        <a href="https://terrellheritage.org/">
+        <img src="../static/heritage.png" style="width:250px" alt="centered"></a>
+    </div>
+
+     <div>
+        <a href="https://www.bftsmuseum.org/">
+        <img src="../static/britfly.png" style="width:250px" alt="centered"></a>
+    </div>
+
+     <div>
+        <a href="https://terrell.filmalley.net/">
+        <img src="../static/film.png" style="width:250px" alt="centered"></a>
+    </div>
+         <div>
+        <a href="https://www.thegroundup-ssi.com/">
+        <img src="../static/groundup.png" style="width:275px" alt="centered"></a>
+    </div>
+
 </div>
 <H1 class="business">More To Come Soon!</H1>
 
@@ -81,5 +66,4 @@ body {
         <a href="https://www.facebook.com/FaithFellowshipCOTN" target="_blank" rel="noopener noreferrer"><img src="../static/likeusinblack.png" style="width:300px"></a>
     </div>
 </div>
-</body>
-</html>
+{% endblock content %}
