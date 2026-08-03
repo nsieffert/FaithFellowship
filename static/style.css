@@ -415,17 +415,22 @@ button[type="submit"]:hover {
 }
 
 .current-study {
-    display: flex;
-    flex-direction: row;
-    padding-top: 10px;
-    gap: 10px;
-    justify-content: center
+    display: grid;
+     grid-template-columns: auto auto auto;
+    padding: 9px;
+    gap: 12px;
+    justify-content: center;
 }
 
 @media screen and (max-width: 600px) {
     .current-study {
         flex-direction: column;
     }
+}
+
+.biblestudytext {
+    font-size: 35px;
+    color: white;
 }
 
 .acts-study-pic {
