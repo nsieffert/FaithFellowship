@@ -658,6 +658,16 @@ button[type="submit"]:hover {
     transform-origin: center center;
 }
 
+.dailyVerses.bibleVerse
+{
+margin-top: .5em;
+}
+
+.dailyVerses.bibleVerse a
+{
+font-weight: bold;
+}
+
 /*footer styling*/
 .footer {
     display: flex;
