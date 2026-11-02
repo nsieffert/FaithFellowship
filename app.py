@@ -95,9 +95,9 @@ def business():
 def first():
     return render_template('first.html')
 
-@app.route('/daily-verse')
-def daily_verse():
-    return render_template('daily-verse.html')
+@app.route('/weekly-verse')
+def weekly_verse():
+    return render_template('weekly-verse.html')
 
 @app.route('/blog')
 def blog():
